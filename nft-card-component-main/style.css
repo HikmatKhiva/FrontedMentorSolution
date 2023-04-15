@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+:root {
+    --text-outfit:'Outfit', sans-serif;
+    --color-main:rgb(13, 25, 43);
+    --color-card:rgb(20, 37, 61);
+    --color-line:rgb(47, 65, 91);
+    --color-white:rgb(255, 255, 255);
+    --color-paragraph:rgb(139, 172, 218,.7);
+    --color-price:rgb(0, 255, 247);
+}
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--text-outfit);
+}
+body {
+    display: grid;
+    place-items: center;
+    background-color: var(--color-main);
+    height: 100vh;
+}
+/* FlexBox */
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.nft-card {
+    border-radius: 12px;
+    width: 350px;
+    background: var(--color-card);
+    padding: 20px;
+}
+.card-img {
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+}
+.card-img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+}
+.card-overlay {
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    background-color: rgb(0, 255, 247,.5);
+    border-radius: 12px;
+    transition: all .6s;
+    cursor: pointer;
+}
+.card-img .card-overlay img {
+    width: 40px;
+    height: 40px;
+}
+.card-img:hover .card-overlay{
+    opacity: 1;
+}
+.card-body {
+    color: var(--color-white);
+}
+.card-body h2 {
+    font-size: 20px;
+    margin: 10px 0;
+    transition: all .6s;
+    cursor: pointer;
+}
+.card-body h2:hover{
+    color: var(--color-price);
+}
+.card-body p {
+    color: var(--color-paragraph);
+    font-size: 18px;
+    font-weight: 400;
+}
+.card-info {
+    margin: 15px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.card-info img{
+    margin-right: 5px;
+    object-fit: contain;
+    max-width: 20px;
+    max-height: 20px;
+}
+.card-info .price {
+    color: var(--color-price);
+    font-size: 18px;
+}
+.card-footer {
+    border-top: 1px solid var(--color-paragraph);
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+}
+.card-footer img {
+    margin-right: 15px;
+    border: 1px solid var(--color-white);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+.card-footer p{
+    color: var(--color-paragraph);
+    font-size: 18px;
+    font-weight: 400;
+}
+.card-footer p .avatar-name {
+    color: var(--color-white);
+    transition: all .6s;
+    cursor: pointer;
+}
+.card-footer p .avatar-name:hover {
+    color: var(--color-price);
+}
+.attribution { 
+    font-size: 14px; 
+    text-align: center;
+    margin-top: 10px;
+    color: var(--color-white);
+}
+.attribution a { color: hsl(228, 45%, 44%); }
+@media screen and (max-width:576px) {
+    .nft-card {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
