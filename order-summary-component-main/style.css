@@ -15,7 +15,7 @@ body {
     display: grid;
     place-items: center;
     height: 100vh;
-    background: url('./images/pattern-background-desktop.svg') no-repeat center/cover;
+    background:#E1E9Ff url('./images/pattern-background-desktop.svg') no-repeat center/cover;
 }
 /* FlexBox */
 .flex {
