@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+:root {
+    --text-font: 'Kumbh Sans', sans-serif;
+    --color-cyan: rgb(25, 162, 174);
+    --color-devaluatedBlue: rgb(45, 50, 72);
+    --color-grayishBlue: rgb(106, 111, 129);
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--text-font);
+}
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    background-color: var(--color-cyan);
+    background-image: url('./images/bg-pattern-top.svg'), url('./images/bg-pattern-bottom.svg');
+    background-position: -50% -600px,150% 600px;
+    background-repeat: no-repeat;
+}
+
+/* FlexBox */
+.flex {
+    display: flex;
+}
+.j-center {
+    justify-content: center;
+}
+.a-center {
+    align-items: center;
+}
+.profile-card {
+    width: 450px;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+}
+.card-top {
+    width: 100%;
+    height: 180px;
+}
+.card-top img {
+    width: 100%;
+    height: 100%;
+}
+.profile-image {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    top: 130px;
+    transform: translateX(-50%);
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 50%;
+}
+.profile-image img {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
+.card-body h2 {
+    text-align: center;
+    padding-top: 60px;
+}
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+.card-body {
+    background-color: #fff;
+}
+.card-body h2 {
+    font-size: 22px;
+    color: var(--color-devaluatedBlue);
+    margin-bottom: 40px;
+}
+.card-body h2 span {
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--color-grayishBlue);
+}
+.card-body h2 .country {
+    margin-top: 10px;
+    display: block;
+}
+.card-footer {
+    padding: 20px;
+    border-top: 1px solid rgba(128, 128, 128, 0.63);
+}
+.card-footer .card-info {
+    width: 30%;
+    text-align: center;
+}
+.card-footer .card-info h3 {
+    color: var(--color-devaluatedBlue);
+}
+.card-footer .card-info p {
+    color: var(--color-grayishBlue);
+    font-weight: 100;
+    margin-top: 10px;
+    letter-spacing: 2px;
+}
+.attribution {
+    margin-top: 20px;
+    font-size: 12px;
+    font-weight: 500;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+@media screen and (max-width:576px) {
+    body {
+        background-position: 200% 150%, -70% -80%;
+    }
+    .profile-card {
+        width: 95%;
+        margin: 0 auto;
+    }
+}
