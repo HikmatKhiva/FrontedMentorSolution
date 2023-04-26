@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap');
+:root {
+    --text-poppins: 'Poppins', sans-serif;;
+    --text-OpenSans: 'Poppins', sans-serif;
+    --color-pink:rgb(255, 82, 191);
+    --color-paleCyan:rgb(235, 251, 255);
+    --color-darkCyan:rgb(0, 37, 46);
+    --color-grayishBlue:rgb(128, 141, 153);
+}
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+/* My Styles */
+.container {
+    width: 1280px;
+    margin: 0 auto;
+}
+.btn{
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+}
+.nav .nav-btn {
+    font-family: var(--text-OpenSans);
+    color: var(--color-darkCyan);
+    background-color: #fff;
+    border-radius: 50px;
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    font-weight: 700;
+    padding: 15px 60px;
+    transition: all .4s;
+}
+.nav .nav-btn:hover {opacity: .8;}
+/* FlexBox */
+.flex{display: flex;}
+.items-center {align-items: center;}
+.j-between {justify-content: space-between;}
+/* Main */
+.wrapper-hero {
+    background: var(--color-paleCyan) url('./images/bg-hero-desktop.svg') no-repeat center/cover;
+    padding: 60px;
+}
+/* Hero */
+.hero {margin-top: 5rem;} 
+.hero .flex {gap: 80px;}
+.hero .left-content{
+    width: calc(50% - 80px);
+    font-family: var(--text-poppins);
+}
+.hero .left-content h1 {
+    font-size: 38px;
+    width: 90%;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: var(--color-darkCyan);
+}
+.btn-start {
+    background: var(--color-pink);
+    color: white;
+    font-weight: 400;
+    font-size: 16px;
+    border-radius: 30px;
+    padding: 10px 30px;
+    transition: all .4s;
+    margin-top: 20px;
+}
+.btn-start:hover {opacity: .7;}
+.hero .left-content p {
+    font-size: 18px;
+    line-height: 27px;
+    color: var(--color-grayishBlue);
+    font-weight: 300;
+}
+.hero .right-content{width: 50%;}
+.hero .right-content img {width: 100%;}
+/* Grow */
+.grow ,.conversations,.users{
+    margin: 40px 0;
+    padding: 60px 60px 80px 120px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+.grow .left-content,
+.conversations .right-content,
+.users .left-content {width: 50%}
+/* Left Content */
+.grow .left-content,
+.conversations .right-content,
+.users .left-content {font-family: var(--text-OpenSans);}
+section h2{
+    font-size: 30px;
+    color: var(--color-darkCyan);
+    margin-bottom: 0.5rem;
+} 
+section p{
+    color: var(--color-grayishBlue);
+    line-height: 27px;
+    font-size: 18px;
+}
+/* Right Content */ 
+section img {width: 100%;} 
+/* Conversations */
+.conversations .flex,.users .flex,.grow .flex{gap: 90px;}
+.conversations .left-content,.users .right-content, .grow .right-content{
+    width: calc(50% - 90px);
+}
+/* Community */
+.community {
+    margin: 60px auto 0px auto;
+    padding: 40px 80px ;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    width: 50%;
+    text-align: center;
+    font-family: var(--text-poppins);
+    transform: translateY(50px);
+    position: relative;
+    background-color: #fff;
+    z-index: 20;
+}
+.community a {
+    margin-top: 20px;
+    padding: 15px 40px;
+}
+/* Footer */
+.footer {
+    background-color: var(--color-darkCyan);
+    position: relative;
+    z-index: 5;
+    font-family: var(--text-OpenSans);
+    padding: 80px 0px 20px 0px;
+}
+.footer .footer-logo {
+    width: 240px;
+    margin-bottom: 40px;
+}
+.footer-grid {
+    display: grid;
+    justify-content: start;
+    grid-template-columns: 400px 380px auto;
+    grid-gap: 6.5rem;
+}
+.lists {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 3.5rem;
+}
+.footer-list {
+    list-style: none;
+    padding: 0;
+}
+.footer-list li {
+    font-weight: 400;
+    margin-bottom: 20px;
+    display: flex;
+    color: white;
+    gap: 10px;
+    align-items: flex-start;
+}
+.footer-list a {
+    text-decoration: none;
+    color: white;
+}
+.footer-list:first-child li img{display: flex;}
+.footer .copyright {
+    text-align: end;
+    color: white;
+}
+.socials {
+    display: flex;
+    gap: 10px;
+}
+.social {
+    width: 35px;
+    height: 35px;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 50%;
+    color: white;
+}
+.attribution { 
+    margin-top: 20px;
+    font-size: 14px;
+    text-align: center;
+    color: white;
+}
+.attribution a { color: hsl(228, 45%, 44%); }
+
+@media screen and (max-width:1200px) {
+    .container {width: 1024px;}
+}
+@media screen and (max-width:1024px) {
+    .container {width: 768px;}
+    .nav .logo img {width: 200px;}
+    .nav .nav-btn {
+        font-size: 14px;
+        padding: 10px 50px;
+    }
+    .hero .left-content h1 {
+        font-size: 30px;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .hero .left-content p,.hero .left-content a {font-size: 14px;}
+    section h2 {font-size: 26px;}
+    section p {font-size: 14px;}
+    .community  {width: 60%;}
+    .btn-start{font-size: 14px;}
+    .footer .footer-logo {width: 200px;}
+    .footer-grid {
+        grid-gap: 2rem;
+        grid-template-columns: 300px 300px auto;
+    }
+    .footer-list li {font-size: 14px;}
+    .lists {grid-gap: 1rem;}
+}
+@media screen and (max-width:768px) {
+    .container {width: 576px;}
+    .flex {flex-wrap: wrap;}
+    .hero {text-align: center;}
+    .grow,.conversations, .users {
+        padding: 60px 40px;
+        text-align: center;
+    }
+    .hero .left-content,.hero .right-content,
+    .grow .left-content, .grow .right-content,
+    .conversations .left-content,.conversations .right-content,
+    .users .left-content, .users .right-content {width: 100%;}
+    .users .flex,.grow .flex {flex-wrap: wrap-reverse;}
+    .community {
+        width: 100%;
+        transform: translateY(60px);
+        padding: 40px;
+    }
+    .footer .footer-logo {margin: 20px 0px;}
+    .footer-grid {
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+@media screen and (max-width:576px) {
+    .container {width: 90%;}
+    .wrapper-hero {padding: 20px 0px;}
+    section h2 {font-size: 1.5rem;}
+    section p {font-size: .8rem;}
+    .community a  {
+        font-size: .8rem;
+        width: 100%;
+    }
+    .footer-list a {font-size: 16px;} 
+    .lists {
+        grid-template-columns: repeat(1,1fr);
+        grid-gap: 0px;
+    }
+    .socials {
+        justify-content: center;
+        margin: 10px 0;
+    }
+    .copyright,.attribution {font-size: .8rem;}
+    .nav .logo img  {width: 100px;}
+    .footer .footer-logo {width: 150px;}
+    .nav .nav-btn {
+        font-size: 12px;
+        padding: 10px 30px;
+    }
+}
