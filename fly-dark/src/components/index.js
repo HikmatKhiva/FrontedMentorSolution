@@ -1,0 +1,6 @@
+export { default as Navbar } from './Navbar.vue'
+export { default as Hero } from './Hero.vue'
+export { default as HeroCards } from './HeroCards.vue'
+export { default as Productive } from './Productive.vue'
+export { default as Access } from './Access.vue'
+export { default as Footer } from './Footer.vue'

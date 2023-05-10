@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.btn-started{
+    background-image: linear-gradient(to right, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
+    @apply py-3 px-20 rounded-full text-white mt-2;
+}
+.btn-access  {
+    background-image: linear-gradient(to right, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
+    @apply rounded-full text-white ;
+}
+@media screen and (max-width:475px) {
+    .mobile {top: 620px;}
+}
+@media screen and (max-width:400px) {
+    .mobile {top: 600px;}
+}
