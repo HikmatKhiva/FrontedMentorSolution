@@ -1,4 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
+import { calculate } from './ageCalculate';
 const initialState = {
     day: 0,
     month: 0,
@@ -13,23 +14,17 @@ const ageSlice = createSlice({
     initialState,
     reducers: {
         dayChange: (state, actions: PayloadAction<number>) => {
-            // get day 
-            if (actions.payload <= 31) {
-                state.day = actions.payload
-            }
+            /* get day validate */ 
+            actions.payload <= 31 && (state.day = actions.payload)
         },
         monthChange: (state, actions: PayloadAction<number>) => {
-            // get month 
-            if (actions.payload <= 12) {
-                state.month = actions.payload
-            }
+            /* get month validate */
+            actions.payload <= 12 && (state.month = actions.payload)
         },
         yearChange: (state, actions: PayloadAction<number>) => {
-            // get years 
+            /* get years validate */ 
             const getYear = new Date().getFullYear()
-            if (getYear >= actions.payload) {
-                state.year = actions.payload
-            }
+            getYear >= actions.payload && (state.year = actions.payload)
         },
         calculateAge: (state) => {
             if (state.day === 0 || state.month === 0 || state.year === 0) {
@@ -37,9 +32,12 @@ const ageSlice = createSlice({
             }
             else if (state.year > 0 && state.month > 0 && state.day > 0) {
                 state.error = false
-                state.currentDay = 31 - state.day
-                state.currentMonth = 12 - state.month
-                state.currentYear = new Date().getFullYear() - state.year
+                const birthDate = new Date(`${state.year}-${state.month}-${state.day}`)
+                // Calculate age function
+                const { years, months, days } = calculate(birthDate)
+                state.currentDay = days
+                state.currentMonth = months
+                state.currentYear = years
             }
             else {
                 state.error = true
@@ -50,7 +48,5 @@ const ageSlice = createSlice({
         }
     }
 })
-
-
 export const { dayChange, monthChange, yearChange, calculateAge } = ageSlice.actions
 export default ageSlice.reducer

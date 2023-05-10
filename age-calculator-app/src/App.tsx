@@ -7,7 +7,7 @@ function App() {
   const dispatch = useAppDispatch();
   const handleClick = () => dispatch(calculateAge());
   return (
-    <div className="bg-light-gray h-screen flex justify-center items-center">
+    <div className="bg-off-white h-screen flex justify-center items-center">
       <div className="bg-white p-5 pr-10 rounded-br-[50px] rounded-md w-[90%] md:w-[500px]">
         <Navbar />
         <main>
@@ -20,13 +20,12 @@ function App() {
               <img src={icon} alt="icon" />
             </button>
           </div>
-          <Card number={age.error ? 0 : age.currentDay} title="days" />
-          <Card number={age.error ? 0 : age.currentMonth} title="months" />
           <Card number={age.error ? 0 : age.currentYear} title="years" />
+          <Card number={age.error ? 0 : age.currentMonth} title="months" />
+          <Card number={age.error ? 0 : age.currentDay} title="days" />
         </main>
       </div>
     </div>
   );
 }
-
 export default App;
