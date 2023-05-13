@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+/* variable colors */
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-color: hsl(210, 46%, 95%);
+}
+
+/* Flex Box Styles*/
+.flex {
+  display: flex;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+main {
+  background-color: #fff;
+  border-radius: 12px;
+  height: 380px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+main .flex {
+  height: inherit;
+}
+
+.left-content {
+  width: 40%;
+  height: 100%;
+}
+.left-content img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+  border-radius: 12px 0px 0px 12px;
+}
+
+/* Left Content Styles */
+/*Right Content Styles */
+.right-content {
+  width: 60%;
+  height: 100%;
+  padding: 40px 60px 40px 40px;
+}
+.right-content h1 {
+  font-size: 1.8rem;
+  color: hsl(217, 19%, 35%);
+  line-height: 1.2;
+}
+.right-content .text {
+  font-size: 20px;
+  margin: 15px 0px;
+  color: hsl(214, 17%, 51%);
+}
+.right-content .share-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.right-content .avatar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.right-content .avatar img {
+  width: 60px;
+  border-radius: 50%;
+}
+.right-content .avatar h3 {
+  color: hsl(217, 19%, 35%);
+}
+.right-content .avatar p {
+  color: hsl(212, 23%, 69%);
+}
+.right-content .share {
+  position: relative;
+}
+.right-content .share button {
+  border: none;
+  background-color: hsl(210, 46%, 95%);
+  color: hsl(212, 23%, 69%);
+  font-size: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: all 0.6s;
+  cursor: pointer;
+  position: relative;
+  z-index: 10;
+}
+.right-content .share button:hover {
+  background: hsl(214, 17%, 51%);
+  color: white;
+}
+
+.tooltip {
+  position: absolute;
+  background: hsl(217, 19%, 35%);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 10px 40px;
+  top: -70px;
+  left: -100px;
+  border-radius: 10px;
+  opacity: 0;
+  transition: all 0.6s;
+  display: none;
+}
+.tooltip h2 {
+  color: hsl(214, 17%, 51%);
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}
+.tooltip .tooltip-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 10px;
+}
+.tooltip .tooltip-content a {
+  color: white;
+  font-size: 1rem;
+}
+.tooltip::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-top: 10px solid hsl(217, 19%, 35%);
+  border-right: 10px solid hsl(217, 19%, 35%);
+  border-left: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  transform: translateX(-50%) rotate(135deg);
+}
+
+.tooltip.show {
+  opacity: 1;
+  max-height: fit-content;
+  display: flex;
+}
+
+.tooltip.show ~ button.btn {
+  background: hsl(214, 17%, 51%);
+  color: white;
+}
+
+.attribution {
+  margin-top: 10px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/*Media Query*/
+/* Laptop */
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 992px;
+  }
+}
+/* Table */
+@media screen and (max-width: 992px) {
+  .container {
+    width: 768px;
+  }
+  .right-content h1 {
+    font-size: 1.5rem;
+  }
+  .right-content .text {
+    font-size: 1.1rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+  main {
+    height: fit-content;
+    margin: 20px 0;
+  }
+  main .flex {
+    flex-wrap: wrap;
+  }
+  main .flex .left-content {
+    height: 350px;
+  }
+  main .flex .left-content img {
+    border-radius: 12px 12px 0px 0px;
+  }
+  main .flex .left-content,
+  main .flex .right-content {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .right-content {
+    padding: 0px;
+  }
+  .right-content h1 {
+    font-size: 1.5rem;
+    padding: 30px 30px 20px 30px;
+  }
+  .right-content .text {
+    font-size: 1rem;
+    padding: 0 30px;
+    margin: 0;
+  }
+  .right-content .avatar img {
+    width: 55px;
+  }
+  .right-content .avatar h3 {
+    font-size: 1rem;
+  }
+  .right-content .avatar p {
+    font-size: 0.8rem;
+  }
+  .right-content .share-flex {
+    position: relative;
+    padding: 10px 30px;
+  }
+  .right-content .share {
+    position: static;
+  }
+  .tooltip {
+    width: 100%;
+    align-items: center;
+    padding: 0 50px;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    border-radius: 0px 0px 12px 12px;
+  }
+  .tooltip::after {
+    display: none;
+  }
+}

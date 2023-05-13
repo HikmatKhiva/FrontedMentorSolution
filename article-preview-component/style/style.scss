@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+/* variable colors */
+$color-dark-grayish-blue: hsl(217, 19%, 35%);
+$color-dark-desaturated-blue: hsl(214, 17%, 51%);
+$color-grayish-blue: hsl(212, 23%, 69%);
+$color-light-grayish-blue: hsl(210, 46%, 95%);
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+}
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-color: $color-light-grayish-blue;
+}
+/* Flex Box Styles*/
+.flex {
+  display: flex;
+}
+.items-center {
+  align-items: center;
+}
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+main {
+  background-color: #fff;
+  border-radius: 12px;
+  height: 380px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  .flex {
+    height: inherit;
+  }
+}
+.left-content {
+  width: 40%;
+  height: 100%;
+  img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+    border-radius: 12px 0px 0px 12px;
+  }
+}
+/* Left Content Styles */
+/*Right Content Styles */
+.right-content {
+  width: 60%;
+  height: 100%;
+  padding: 40px 60px 40px 40px;
+  h1 {
+    font-size: 1.8rem;
+    color: $color-dark-grayish-blue;
+    line-height: 1.2;
+  }
+  .text {
+    font-size: 20px;
+    margin: 15px 0px;
+    color: $color-dark-desaturated-blue;
+  }
+  .share-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  .avatar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    img {
+      width: 60px;
+      border-radius: 50%;
+    }
+    h3 {
+      color: $color-dark-grayish-blue;
+    }
+    p {
+      color: $color-grayish-blue;
+    }
+  }
+  .share {
+    position: relative;
+    button {
+      border: none;
+      background-color: $color-light-grayish-blue;
+      color: $color-grayish-blue;
+      font-size: 20px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      transition: all 0.6s;
+      cursor: pointer;
+      position: relative;
+      z-index: 10;
+      &:hover {
+        background: $color-dark-desaturated-blue;
+        color: white;
+      }
+    }
+  }
+}
+.tooltip {
+  position: absolute;
+  background: $color-dark-grayish-blue;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 10px 40px;
+  top: -70px;
+  left: -100px;
+  border-radius: 10px;
+  opacity: 0;
+  transition: all 0.6s;
+  display: none;
+
+  h2 {
+    color: $color-dark-desaturated-blue;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+  }
+  .tooltip-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 10px;
+    a {
+      color: white;
+      font-size: 1rem;
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-top: 10px solid $color-dark-grayish-blue;
+    border-right: 10px solid $color-dark-grayish-blue;
+    border-left: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    transform: translateX(-50%) rotate(135deg);
+  }
+}
+.tooltip.show {
+  opacity: 1;
+  max-height: fit-content;
+  display: flex;
+}
+.tooltip.show ~ button.btn {
+  background: $color-dark-desaturated-blue;
+  color: white;
+}
+.attribution {
+  margin-top: 10px;
+  font-size: 14px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+/*Media Query*/
+/* Laptop */
+@media screen and (max-width: 1024px) {
+  .container {
+    width: 992px;
+  }
+}
+/* Table */
+@media screen and (max-width: 992px) {
+  .container {
+    width: 768px;
+  }
+  .right-content {
+    h1 {
+      font-size: 1.5rem;
+    }
+    .text {
+      font-size: 1.1rem;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+  main {
+    height: fit-content;
+    margin: 20px 0;
+    .flex {
+      flex-wrap: wrap;
+      .left-content {
+        height: 350px;
+        img {
+          border-radius: 12px 12px 0px 0px;
+        }
+      }
+      .left-content,
+      .right-content {
+        width: 100%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 576px) {
+  .right-content {
+    padding: 0px;
+    h1 {
+      font-size: 1.5rem;
+      padding:30px 30px 20px 30px;
+    }
+    .text {
+      font-size: 1rem;
+      padding: 0 30px;
+      margin: 0;
+    }
+    .avatar {
+      img {
+        width: 55px;
+      }
+      h3 {
+        font-size: 1rem;
+      }
+      p{
+        font-size: .8rem;
+      }
+    }
+    .share-flex {
+      position: relative;
+      padding: 10px 30px;
+    }
+    .share {
+      position: static;
+    }
+  }
+  .tooltip {
+    width: 100%;
+    align-items: center;
+    padding: 0 50px;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    border-radius: 0px 0px 12px 12px;
+    &::after {
+      display: none;
+    }
+  }
+}
