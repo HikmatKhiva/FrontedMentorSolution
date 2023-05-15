@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+$color-desturated-red: hsl(0, 36%, 70%);
+$color-soft-red: hsl(0, 93%, 68%);
+$gradient-white: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+$gradient-red: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Josefin Sans", sans-serif;
+  height: 100vh;
+}
+/*Flex Box Style*/
+.flex {
+  display: flex;
+}
+main {
+  height: 100vh;
+  width: 100vw;
+  margin: 0 auto;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  overflow-x: hidden;
+  .flex {
+    height: inherit;
+    width: inherit;
+  }
+  .left-content {
+    background: url("../images/bg-pattern-desktop.svg"), $gradient-white;
+    background-size: inherit;
+    width: 50%;
+    flex-grow: 1;
+    padding: 40px 80px 0px 80px;
+    .content {
+      padding: 40px 0px 30px 0px;
+    }
+    h1 {
+      font-size: 80px;
+      text-transform: uppercase;
+      line-height: 1.1;
+      letter-spacing: 10px;
+      span {
+        color: $color-desturated-red;
+      }
+    }
+    p {
+      width: 70%;
+      font-size: 20px;
+      line-height: 1.2;
+      color: $color-desturated-red;
+      margin: 10px 0;
+    }
+
+    form {
+      width: 70%;
+      border: 1px solid $color-desturated-red;
+      border-radius: 50px;
+      display: flex;
+      margin-top: 20px;
+      position: relative;
+      label {
+        position: relative;
+        display: flex;
+        width: 100%;
+        img {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right:70px;
+          transition: all .4s;
+          opacity: 0;
+        }
+      }
+      input {
+        flex-grow: 1;
+        border: 1px solid $color-desturated-red;
+        outline: none;
+        background:transparent;
+        padding: 0px 20px;
+        border-radius: 50px;
+        font-size: 18px;
+        padding: 15px 25px;
+        &::placeholder {
+          color: $color-desturated-red;
+        }
+      }
+      input.invalid {
+        border-color:red;
+      }
+      input.invalid ~ img{
+        opacity: 1;
+      }
+      button {
+        border: none;
+        background-image: $gradient-red;
+        height: 100%;
+        padding: 15px 30px;
+        border-radius: 50px;
+        color: white;
+        position: absolute;
+        right: -20px;
+        transition: all 0.6s;
+        font-size: 20px;
+        cursor: pointer;
+      }
+    }
+    .error {
+      margin: 0px 0px 0px 20px;
+      color: red;
+      font-size: 14px;
+      opacity: 0;
+      transition: all 0.6s;
+      visibility: hidden;
+    }
+    .error.show {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  .right-content {
+    background: url("../images/hero-desktop.jpg") no-repeat top;
+    width: 40%;
+  }
+}
+.attribution {
+  margin: 10px 0px;
+  font-size: 14px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+  }
+  main {
+    width: 1440px;
+    height: 800px;
+  }
+}
+@media screen and (max-width: 768px) {
+  main {
+    height: fit-content;
+    .left-content {
+      padding: 60px;
+      h1 {
+        font-size: 60px;
+      }
+      p,
+      form {
+        width: 100%;
+      }
+    }
+  }
+}
+@media screen and (max-width: 576px) {
+  nav {
+    padding: 20px;
+    img {
+      width: 150px;
+    }
+  }
+  main {
+    .flex {
+      flex-wrap: wrap-reverse;
+    }
+    .left-content,
+    .right-content {
+      width: 100%;
+    }
+    .left-content {
+      padding: 0;
+      .content {
+        padding: 20px;
+        text-align: center;
+      }
+      h1 {
+        font-size: 2.5rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+      form {
+        input {
+          padding: 10px 20px;
+        }
+        button {
+          padding: 10px 30px;
+        }
+      }
+    }
+    .image-mobile {
+      background: url("../images/hero-mobile.jpg") no-repeat top;
+      height: 250px;
+      width: 100%;
+    }
+    .right-content {
+      display: none;
+    }
+  }
+}
