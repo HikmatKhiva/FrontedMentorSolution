@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Libre Franklin", sans-serif;
+}
+
+nav {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .title {
+  text-align: center;
+}
+main .title h1 {
+  font-size: 2.6rem;
+  color: hsl(0, 0%, 59%);
+}
+main .title h1 span {
+  color: hsl(209, 33%, 12%);
+}
+main .title p {
+  margin-top: 5px;
+  font-size: 18px;
+  font-weight: 600;
+}
+main form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0px;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+main form label {
+  position: relative;
+}
+main form label p {
+  position: absolute;
+  left: 10px;
+  font-size: 12px;
+  color: red;
+  bottom: -20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.6s;
+}
+main form input {
+  width: 300px;
+  padding: 12px 20px;
+  border-radius: 30px;
+  border: 1px solid hsl(223, 100%, 88%);
+  outline: none;
+  font-size: 18px;
+  flex: 0 1 300px;
+}
+main form input.invalid-email {
+  border-color: red;
+}
+main form input.invalid-email ~ p {
+  opacity: 1;
+  visibility: visible;
+}
+main form button {
+  width: 150px;
+  flex: 0 0 150px;
+  border-radius: 30px;
+  background: hsl(223, 87%, 63%);
+  border: none;
+  color: white;
+  font-weight: 600;
+  padding: 15px 20px;
+  cursor: pointer;
+  transition: all 0.6s;
+}
+main form button:hover {
+  opacity: 0.8;
+}
+main img {
+  height: 650px;
+  margin: 10px 0px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer .icons {
+  display: flex;
+  gap: 10px;
+  margin: 0px 0px 10px;
+}
+footer .icons a {
+  width: 40px;
+  height: 40px;
+  border: 1px solid hsl(223, 100%, 88%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 50%;
+  color: hsl(223, 87%, 63%);
+  padding: 5px;
+  transition: all 0.6s;
+}
+footer .icons a:hover {
+  color: white;
+  background-color: hsl(223, 87%, 63%);
+}
+footer h4 {
+  color: hsl(0, 0%, 59%);
+  font-weight: 500;
+}
+
+.attribution {
+  margin: 10px 0px;
+  font-size: 13px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 1400px) {
+  body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+  }
+}
+@media screen and (max-width: 1024px) {
+  main img {
+    width: 700px;
+    height: 300px;
+  }
+}
+@media screen and (max-width: 768px) {
+  main img {
+    height: 300px;
+  }
+}
+@media screen and (max-width: 576px) {
+  main .title h1 {
+    font-size: 2rem;
+    font-weight: 400;
+  }
+  main .title p {
+    font-size: 0.8rem;
+  }
+  main form button {
+    flex: 0 0 300px;
+    margin-top: 20px;
+  }
+  main img {
+    height: 250px;
+    width: 95%;
+  }
+}
