@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer {
+    .flag-card {
+        @apply bg-white shadow-md rounded-lg;
+        width: calc(25% - 60px);
+        height: 350px;
+    }
+    .info-side {
+        width: calc(50% - 60px);
+    }
+    @media screen and (max-width:1024px) {
+        .flag-card {
+            width: calc(33% - 60px);
+        }
+    }
+    @media screen and (max-width:768px) {
+        .flag-card {
+            width: calc(50% - 60px);
+        }
+    }
+    @media screen and (max-width:576px) {
+        .flag-card {
+            width: 100%;
+        }
+    }
+}
