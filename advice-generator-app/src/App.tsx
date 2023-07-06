@@ -16,7 +16,7 @@ function App() {
         <a className="w-6 h-6 hover:scale-110 transition-all duration-300" href="https://www.frontendmentor.io/challenges/advice-generator-app-QdUG-13db" target="_blank">
           <img className="w-full h-full rounded-full" src={frontedMentorIo} alt="frontedMentorIo" />
         </a>
-        <a href="" target="_blank" className="w-6 h-6 hover:scale-110 transition-all duration-300">
+        <a href="https://github.com/HikmatKhiva/FrontedMentorSolution/tree/main/advice-generator-app"  target="_blank" className="w-6 h-6 hover:scale-110 transition-all duration-300">
           <img src={github} alt="github" className="w-full h-full rounded-full" />
         </a>
       </div>
