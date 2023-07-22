@@ -9,5 +9,5 @@ import Header from './components/Header.vue'
   </main>
 </template>
 <style>
-@import "primeicons/primeicons.css";
+@import 'primeicons/primeicons.css';
 </style>
