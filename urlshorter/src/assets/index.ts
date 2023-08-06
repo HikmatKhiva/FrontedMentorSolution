@@ -1,0 +1,13 @@
+export { default as facebook } from "./images/icon-facebook.svg";
+export { default as twitter } from "./images/icon-twitter.svg";
+export { default as instagram } from "./images/icon-instagram.svg";
+export { default as pinterest } from "./images/icon-pinterest.svg";
+export { default as recognition } from "./images/icon-brand-recognition.svg";
+export { default as records } from "./images/icon-detailed-records.svg";
+export { default as customizable } from "./images/icon-fully-customizable.svg";
+export { default as logo } from "./images/logo.svg";
+export { default as working } from "./images/illustration-working.svg";
+export { default as mb_boots } from "./images/bg-boost-mobile.svg";
+export { default as ds_boots } from "./images/bg-boost-desktop.svg";
+export { default as ds_shorten } from "./images/bg-shorten-desktop.svg";
+export { default as mb_shorten } from "./images/bg-shorten-mobile.svg";

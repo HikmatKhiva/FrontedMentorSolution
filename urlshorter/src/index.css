@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.card {
+  width: calc(33% - 20px);
+  box-sizing: border-box;
+  align-self: self-start;
+  position: relative;
+  z-index: 5;
+}
+.card:nth-child(2) {
+  margin-top: 50px;
+}
+.card:last-child {
+  margin-top: 100px;
+}
+
+.card:nth-child(2)::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 20px;
+  height: 10px;
+  left: -20px;
+  top: 40%;
+  transform: translateY(-50%);
+  background-color: hsl(180, 66%, 49%);
+  z-index: 2;
+}
+.card:nth-child(2)::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 20px;
+  height: 10px;
+  right: -20px;
+  top: 40%;
+  transform: translateY(-50%);
+  background-color: hsl(180, 66%, 49%);
+  z-index: 2;
+}
+
+.lighted {
+  filter: brightness(0) invert(1);
+}
+
+.container {
+  @apply xl:px-0 px-5;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    flex-grow: 1;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .card {
+    width: 100%;
+  }
+  .service-image {
+    align-self: center;
+    z-index: 5;
+  }
+  .card:nth-child(2)::before {
+    display: none;
+  }
+  .card:nth-child(2)::after {
+    display: none;
+  } 
+  .card:nth-child(2) > span::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 10px;
+    height: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -30px;
+    background-color: hsl(180, 66%, 49%);
+  }
+  .card:nth-child(3) > span::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 10px;
+    height: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -30px;
+    background-color: hsl(180, 66%, 49%);
+  }
+  .card {
+    margin-bottom: 50px;
+  }
+  .card:nth-child(2) {
+    margin-top: 0px;
+  }
+  .card:last-child {
+    margin-top: 0px;
+  }
+}
