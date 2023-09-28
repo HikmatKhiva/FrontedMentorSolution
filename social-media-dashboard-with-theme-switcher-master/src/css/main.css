@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.success {
+    @apply text-lime-green text-sm font-bold relative;
+}
+.success::before{
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 6px;
+    left: -18px;
+    transform: translateY(-50%);
+    border: 6px solid hsl(163, 72%, 41%);
+    border-left-color: transparent;
+    border-right-color: transparent;
+    border-top-color: transparent;
+}
+
+.social-card {
+    width: calc(25% - 20px);
+}
