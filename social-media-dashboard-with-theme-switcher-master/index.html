@@ -1,41 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
-  <title>Frontend Mentor | [Challenge Name Here]</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./src/images/favicon-32x32.png" />
+  <title>Frontend Mentor | social-media-dashboard-with-theme-switcher-master</title>
   <link rel="stylesheet" href="src/css/style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
-
-<body class="bg-white font-inter ">
+<body class="bg-white dark:bg-dark-blue font-inter ">
   <!-- Top -->
-  <div class="bg-top-light-blue rounded-b-3xl">
+  <div class="bg-top-light-blue dark:bg-top-very-dark-blue rounded-b-3xl">
     <div class="container mx-auto">
       <!-- Header -->
-      <header class="translate-y-10">
-        <div class="container mx-auto flex justify-between">
+      <header class="md:translate-y-10 pt-5 md:pt-0">
+        <div class="flex flex-wrap md:flex-row flex-col gap-3 justify-between">
           <!-- Title -->
-          <div>
-            <h1 class="leading-none text-2xl dark:text-white font-bold">
+          <div class="flex-grow">
+            <h1 class="leading-none md:text-2xl text-xl mb-1 dark:text-white font-bold">
               Social Media Dashboard
             </h1>
-            <p class="leading-none text-sm dark:text-dark-desaturated-blue-text font-bold text-dark-grayish-blue">
+            <p class="leading-none mb-2 text-sm dark:text-dark-desaturated-blue-text font-bold text-dark-grayish-blue">
               Total Followers: 23,004
             </p>
           </div>
+          <hr class="my-2 h-[2px] border-[1.5px] md:hidden ">
           <!-- Theme Mode  -->
-          <div class="flex gap-1 items-center">
-            <p class="text-dark-grayish-blue font-bold">Dark Mode</p>
-            <button>click</button>
+          <div class="flex gap-2 flex-grow justify-between md:justify-start md:flex-grow-0 items-center">
+            <p class="text-dark-grayish-blue dark:text-white font-bold">Dark Mode</p>
+            <button class="theme-btn w-10 h-5 inline-block bg-[#aeb2cb] dark:bg-[#3ebfa6] rounded-2xl relative">
+              <span
+                class="w-[18px] h-[18px] absolute left-[1px] top-[1px] inline-block bg-white dark:bg-[#242b44] rounded-full"></span>
+            </button>
           </div>
         </div>
       </header>
       <!-- Social Cards -->
-      <div class="flex translate-y-24 gap-10">
+      <div class="flex flex-wrap md:translate-y-24 pt-14 md:pt-0 gap-10">
         <!-- Social Card Start-->
-        <div class="w-[25%] border-t-[6px] social-card rounded-md border-facebook p-5 bg-light-card-blue shadow">
+        <div class="border-t-[6px] social-card rounded-md border-facebook p-5 bg-light-card-blue shadow">
           <div class="flex justify-center gap-2">
             <img class="w-6" src="src/images/icon-facebook.svg" alt="facebook">
             <p class="font-bold text-dark-grayish-blue">@nathanf</p>
@@ -45,12 +50,15 @@
             <p class="uppercase tracking-[6px] text-dark-grayish-blue">Followers</p>
           </div>
           <div class="flex justify-center mt-3">
-            <p class="success ">12 Today</p>
+            <p class="success ">
+              <span class="status-icon"></span>
+              12 Today
+            </p>
           </div>
         </div>
         <!-- Social Card End-->
         <!-- Social Card Start-->
-        <div class="w-[25%] border-t-[6px] social-card rounded-md border-twitter p-5 bg-light-card-blue shadow">
+        <div class="border-t-[6px] social-card rounded-md border-twitter p-5 bg-light-card-blue shadow">
           <div class="flex justify-center gap-2">
             <img class="w-6" src="src/images/icon-twitter.svg" alt="twitter">
             <p class="font-bold text-dark-grayish-blue">@nathanf</p>
@@ -59,13 +67,16 @@
             <h2 class="text-[50px] font-bold">1044</h2>
             <p class="uppercase tracking-[6px] text-dark-grayish-blue">Followers</p>
           </div>
-          <div class="flex justify-center mt-3">
-            <p class="success ">99 Today</p>
+          <div class="flex  justify-center mt-3">
+            <p class="success">
+              <span class="status-icon"></span>
+              99 Today
+            </p>
           </div>
         </div>
         <!-- Social Card End-->
         <!-- Social Card Start-->
-        <div class="w-[25%] border-t-[6px] social-card rounded-md border-twitter p-5 bg-light-card-blue shadow">
+        <div class="border-t-[6px] social-card rounded-md border-twitter p-5 bg-light-card-blue shadow">
           <div class="flex justify-center gap-2">
             <img class="w-6" src="src/images/icon-instagram.svg" alt="instagram">
             <p class="font-bold text-dark-grayish-blue">@realnathanf</p>
@@ -75,32 +86,187 @@
             <p class="uppercase tracking-[6px] text-dark-grayish-blue">Followers</p>
           </div>
           <div class="flex justify-center mt-3">
-            <p class="success ">1099 Today</p>
+            <p class="success ">
+              <span class="status-icon"></span>
+              1099 Today
+            </p>
           </div>
         </div>
         <!-- Social Card End-->
-
+        <!-- Social Card Start-->
+        <div class="border-t-[6px] social-card rounded-md border-youtube p-5 bg-light-card-blue shadow">
+          <div class="flex justify-center gap-2">
+            <img class="w-6" src="src/images/icon-youtube.svg" alt="youtube">
+            <p class="font-bold text-dark-grayish-blue">Nathan F.</p>
+          </div>
+          <div class=" text-center py-3">
+            <h2 class="text-[50px] font-bold">8239</h2>
+            <p class="uppercase tracking-[6px] text-dark-grayish-blue">Subscribers</p>
+          </div>
+          <div class="flex justify-center mt-3">
+            <p class="lose">
+              <span class="status-icon"></span>
+              144 Today
+            </p>
+          </div>
+        </div>
+        <!-- Social Card End-->
       </div>
     </div>
   </div>
   <!-- Main Content -->
-  <main>
+  <main class="mt-28">
     <div class="container mx-auto">
-
-      <!-- 
-          Followers  Today Nathan F. 8239 Subscribers 144
-        Today Overview - Today Page Views 87 3% Likes 52 2% Likes 5462 2257%
-        Profile Views 52k 1375% Retweets 117 303% Likes 507 553% Likes 107 19%
-        Total Views 1407 12% -->
+      <h2 class="my-5 text-2xl text-dark-grayish-blue font-semibold">Overview - Today</h2>
+      <!-- Overview Flex  -->
+      <div class="flex flex-wrap gap-10">
+        <!-- Overview Card Start  -->
+        <div class="bg-light-card-blue overview-card py-8 p-5 rounded-md">
+          <!-- Overview Top -->
+          <div class="flex justify-between items-center">
+            <h3 class="text-base font-bold text-dark-grayish-blue">Page Views</h3>
+            <img class="w-5" src="src/images/icon-facebook.svg" alt="facebook">
+          </div>
+          <!-- Overview Bottom -->
+          <div class="flex items-center justify-between mt-5">
+            <h3 class="text-[26px] font-bold">87</h3>
+            <p class="success-small text-[12px]">
+              <span class="status-icon"></span>
+              3%
+            </p>
+          </div>
+        </div>
+        <!-- Overview Card End -->
+        <!-- Overview Card Start  -->
+        <div class="bg-light-card-blue overview-card py-8 p-5 rounded-md">
+          <!-- Overview Top -->
+          <div class="flex justify-between items-center">
+            <h3 class="text-base font-bold text-dark-grayish-blue">Likes</h3>
+            <img class="w-5" src="src/images/icon-facebook.svg" alt="facebook">
+          </div>
+          <!-- Overview Bottom -->
+          <div class="flex items-center justify-between mt-5">
+            <h3 class="text-[26px] font-bold">52</h3>
+            <p class="success-small text-[12px]">
+              <span class="status-icon"></span>
+              2%
+            </p>
+          </div>
+        </div>
+        <!-- Overview Card End -->
+        <!-- Overview Card Start  -->
+        <div class="bg-light-card-blue overview-card py-8 p-5 rounded-md">
+          <!-- Overview Top -->
+          <div class="flex justify-between items-center">
+            <h3 class="text-base font-bold text-dark-grayish-blue">Likes</h3>
+            <img class="w-5" src="src/images/icon-instagram.svg" alt="instagram">
+          </div>
+          <!-- Overview Bottom -->
+          <div class="flex items-center justify-between mt-5">
+            <h3 class="text-[26px] font-bold">5462</h3>
+            <p class="success-small text-[12px]">
+              <span class="status-icon"></span>
+              2257%
+            </p>
+          </div>
+        </div>
+        <!-- Overview Card End -->
+        <!-- Overview Card Start  -->
+        <div class="bg-light-card-blue overview-card py-8 p-5 rounded-md">
+          <!-- Overview Top -->
+          <div class="flex justify-between items-center">
+            <h3 class="text-base font-bold text-dark-grayish-blue">Profile Views</h3>
+            <img class="w-5" src="src/images/icon-instagram.svg" alt="instagram">
+          </div>
+          <!-- Overview Bottom -->
+          <div class="flex items-center justify-between mt-5">
+            <h3 class="text-[26px] font-bold">52k</h3>
+            <p class="success-small text-[12px]">
+              <span class="status-icon"></span>
+              1375%
+            </p>
+          </div>
+        </div>
+        <!-- Overview Card End -->
+        <!-- Overview Card Start  -->
+        <div class="bg-light-card-blue overview-card py-8 p-5 rounded-md">
+          <!-- Overview Top -->
+          <div class="flex justify-between items-center">
+            <h3 class="text-base font-bold text-dark-grayish-blue">Retweets</h3>
+            <img class="w-5" src="src/images/icon-twitter.svg" alt="twitter">
+          </div>
+          <!-- Overview Bottom -->
+          <div class="flex items-center justify-between mt-5">
+            <h3 class="text-[26px] font-bold">117</h3>
+            <p class="success-small text-[12px]">
+              <span class="status-icon"></span>
+              303%
+            </p>
+          </div>
+        </div>
+        <!-- Overview Card End -->
+        <!-- Overview Card Start  -->
+        <div class="bg-light-card-blue overview-card py-8 p-5 rounded-md">
+          <!-- Overview Top -->
+          <div class="flex justify-between items-center">
+            <h3 class="text-base font-bold text-dark-grayish-blue">Likes</h3>
+            <img class="w-5" src="src/images/icon-twitter.svg" alt="twitter">
+          </div>
+          <!-- Overview Bottom -->
+          <div class="flex items-center justify-between mt-5">
+            <h3 class="text-[26px] font-bold">507</h3>
+            <p class="success-small text-[12px]">
+              <span class="status-icon"></span>
+              553%
+            </p>
+          </div>
+        </div>
+        <!-- Overview Card End -->
+        <!-- Overview Card Start  -->
+        <div class="bg-light-card-blue overview-card py-8 p-5 rounded-md">
+          <!-- Overview Top -->
+          <div class="flex justify-between items-center">
+            <h3 class="text-base font-bold text-dark-grayish-blue">Likes</h3>
+            <img class="w-5" src="src/images/icon-youtube.svg" alt="youtube">
+          </div>
+          <!-- Overview Bottom -->
+          <div class="flex items-center justify-between mt-5">
+            <h3 class="text-[26px] font-bold">107</h3>
+            <p class="lose-small text-[12px]">
+              <span class="status-icon"></span>
+              19%
+            </p>
+          </div>
+        </div>
+        <!-- Overview Card End -->
+        <!-- Overview Card Start  -->
+        <div class="bg-light-card-blue overview-card py-8 p-5 rounded-md">
+          <!-- Overview Top -->
+          <div class="flex justify-between items-center">
+            <h3 class="text-base font-bold text-dark-grayish-blue">Total Views</h3>
+            <img class="w-5" src="src/images/icon-youtube.svg" alt="youtube">
+          </div>
+          <!-- Overview Bottom -->
+          <div class="flex items-center justify-between mt-5">
+            <h3 class="text-[26px] font-bold">1407</h3>
+            <p class="lose-small text-[12px]">
+              <span class="status-icon"></span>
+              12%
+            </p>
+          </div>
+        </div>
+        <!-- Overview Card End -->
+      </div>
     </div>
   </main>
-
-  <!-- <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </div> -->
+  <div class="attribution mt-20 flex justify-center gap-2">
+    <a class="w-6 h-6 hover:scale-110 transition-all duration-300" href="https://www.frontendmentor.io/challenges/social-media-dashboard-with-theme-switcher-6oY8ozp_H/hub" target="_blank">
+      <img class="w-full h-full rounded-full" src="src/images/frontend-mentor-logos-idDksQWGNy.jpeg" alt="frontedMentorIo" />
+    </a>
+    <a href="https://github.com/HikmatKhiva/FrontedMentorSolution/tree/main/advice-generator-app"  target="_blank" class="w-6 h-6 hover:scale-110 transition-all duration-300">
+      <img src="src/images/github-logo.png" alt="github" class="w-full h-full rounded-full" />
+    </a>
+  </div>
+  <script src="src/script/main.js"></script>
 </body>
-
 </html>
