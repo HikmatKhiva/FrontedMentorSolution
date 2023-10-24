@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hero-bg {
+    @apply bg-no-repeat bg-bottom bg-contain bg-[#3EBFFF];
+}
+
+.card {
+    height: 600px;
+    display: grid;
+    place-items: center;
+}
+
+.card-bg {
+    @apply bg-no-repeat bg-center bg-cover;
+}
+
+.client-card {
+    width: calc(30% - 20px);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.socials li img {
+    transition: all .3s;
+}
+
+.socials li:hover img {
+    filter: brightness(0) invert(1);
+}
+
+.learn-btn:hover~.learn-btn__border {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.learn-btn__border {
+    display: inline-block;
+    width: 120px;
+    height: 7px;
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    border-radius: 20px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .6s;
+}
+
+.learn-btn__border.btn-red {
+    @apply bg-soft-red
+}
+
+.learn-btn__border.btn-yellow {
+    @apply bg-yellow
+}
+@media (min-width:1700px) {
+    .container-xxl {
+        width: 1600px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width:600px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .mobile-menu__button {
+        display: inline-block;
+    }
+
+    .header-nav {
+        position: fixed;
+        top: 90px;
+        align-items: center;
+        flex-direction: column;
+        background-color: white;
+        width: 90%;
+        left: 5%;
+        height: 0;
+        padding: 20px;
+        transition-property: transform height;
+        transition-duration: .4s;
+        transform: scaleY(0);
+        transform-origin: top;
+    }
+
+    .header-nav.show {
+        transform-origin: top;
+        transform: scaleY(1);
+        height: fit-content;
+    }
+
+    .header-nav li {
+        opacity: 0;
+    }
+
+    .header-nav.show li {
+        opacity: 1;
+    }
+
+    .header-nav.show::after {
+        content: '';
+        position: absolute;
+        border: 10px solid white;
+        border-bottom-color:transparent ;
+        border-right-color:transparent ;
+        top: -10px;
+        transform: rotate(-45deg);
+        right: -10px;
+    }
+
+    .header-nav li a {
+        color: hsl(232, 10%, 55%);
+    }
+    .card,.client-card {
+        width: 100%;
+    }
+    #gallery img {
+        width: 50%;
+    }
+}

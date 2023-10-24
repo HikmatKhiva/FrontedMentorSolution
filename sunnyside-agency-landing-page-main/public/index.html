@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Sunnyside agency landing page</title>
+  <link rel="stylesheet" href="../src/css/style.css">
+</head>
+
+<body>
+  <!-- Hero -->
+  <!-- min-h-[850px] -->
+  <div class="md:bg-desktop-header bg-mobile-header pb-32 hero-bg ">
+    <!-- Header -->
+    <header class="py-5">
+      <div class="container-xxl">
+        <div class="container mx-auto flex justify-between items-center">
+          <!-- Logo -->
+          <a href="#" class="">
+            <img src="../src/assets/images/logo.svg" alt="header-logo">
+          </a>
+          <!-- nav -->
+          <nav class="flex relative items-center gap-2">
+            <!--Mobile Menu Open Button -->
+            <button class="mobile-menu__button hidden" type="button" id="nav-header-button">
+              <img class="w-8" src="../src/images/icons-menu.svg" alt="icons-menu">
+            </button>
+            <ul class="header-nav font-barlow flex gap-5">
+              <li>
+                <a class="p-3 px-5 rounded-3xl text-white cursor-pointer hover:bg-[#70CEFF] hover:font-fraunces hover:uppercase transition-all duration-300"
+                  href="#">About</a>
+              </li>
+              <li>
+                <a class="p-3 px-5 rounded-3xl text-white cursor-pointer hover:bg-[#70CEFF] hover:font-fraunces hover:uppercase transition-all duration-300"
+                  href="#">Services</a>
+              </li>
+              <li>
+                <a class="p-3 px-5 rounded-3xl text-white cursor-pointer hover:bg-[#70CEFF] hover:font-fraunces hover:uppercase transition-all duration-300"
+                  href="#">Projects</a>
+              </li>
+              <li>
+                <a class="p-3 px-5 rounded-3xl text-white cursor-pointer hover:bg-[#70CEFF] hover:font-fraunces hover:uppercase transition-all duration-300"
+                  href="#">Contact</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <div class="text-center">
+      <h1 class="mt-10 mb-28 text-4xl lg:text-6xl uppercase font-fraunces text-white tracking-widest">We are creatives
+      </h1>
+      <button class="animate-bounce" type="button">
+        <img class="h-24" src="../src/images/icon-arrow-down.svg" alt="arrow-down">
+      </button>
+    </div>
+  </div>
+  <main>
+    <div class="container-xxl">
+
+      <!-- Card -->
+      <section id="cards">
+        <div class="flex flex-wrap">
+
+          <div class="w-1/2 card">
+            <div class="w-1/2 relative">
+              <h2 class="font-fraunces text-2xl md:text-3xl text-dark-blue mb-2">Transform your <br /> brand</h2>
+              <p class="text-dark-grayish-blue md:text-lg font-barlow">We are a full-service creative agency
+                specializing
+                in
+                helping brands grow fast.
+                Engage your clients through compelling visuals that do most of the marketing for you.</p>
+              <a href="#"
+                class="font-fraunces learn-btn uppercase z-10 relative text-dark-blue inline-block mt-10">Learn
+                more
+              </a>
+              <span class="learn-btn__border btn-yellow"></span>
+            </div>
+          </div>
+
+          <div class="w-1/2 card md:bg-desktop-egg md:order-none -order-1 bg-mobile-egg card-bg"></div>
+
+          <div class="w-1/2 card md:bg-desktop-stand bg-mobile-stand card-bg "></div>
+
+          <div class="w-1/2 card">
+            <div class="w-1/2 relative">
+              <h2 class="font-fraunces text-2xl md:text-3xl text-dark-blue mb-2">Stand out to the right <br> audience
+              </h2>
+              <p class="text-dark-grayish-blue md:text-lg font-barlow"> Using a collaborative formula of designers,
+                researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital
+                places. </p>
+              <a href="#"
+                class="font-fraunces learn-btn uppercase text-dark-blue inline-block z-10 relative mt-10">Learn
+                more
+              </a>
+              <span class="learn-btn__border btn-red"></span>
+            </div>
+          </div>
+
+          <div class="w-1/2 card  overflow-hidden relative">
+            <picture class="w-full h-full">
+              <img class="w-full h-full md:inline-block hidden" src="../src/images/desktop/image-graphic-design.jpg"
+                alt="graphic-design">
+              <img class="w-full h-full md:hidden inline-block" src="../src/images/mobile/image-graphic-design.jpg"
+                alt="graphic-design">
+            </picture>
+            <div class="absolute bottom-10 text-center w-1/2 mx-auto">
+              <h3 class="font-fraunces text-2xl md:text-3xl text-dark-cyan">Graphic design</h3>
+              <p class="md:text-lg mt-5 font-barlow text-dark-cyan"> Great design makes you memorable. We deliver
+                artwork
+                that underscores your brand message and captures
+                potential clients’ attention.</p>
+            </div>
+          </div>
+
+          <div class="w-1/2 card overflow-hidden relative">
+            <picture class="w-full h-full">
+              <img class="w-full h-full md:inline-block hidden" src="../src/images/desktop/image-photography.jpg"
+                alt="image-photography-desktop">
+              <img class="w-full h-full md:hidden inline-block" src="../src/images/mobile/image-photography.jpg"
+                alt="image-photography-mobile">
+            </picture>
+            <div class="absolute bottom-10 text-center w-1/2 mx-auto">
+              <h3 class="font-fraunces text-2xl md:text-3xl text-dark-cyan">Photography</h3>
+              <p class="md:text-lg mt-5 font-barlow text-dark-cyan">Increase your credibility by getting the most
+                stunning,
+                high-quality photos that improve your business image.</p>
+            </div>
+          </div>
+
+      </section>
+      <!-- Testimonial -->
+      <section id="testimonial" class="py-20">
+        <div class="container mx-auto">
+          <h4 class="text-center uppercase text-grayish-blue font-fraunces text-2xl tracking-widest">Client testimonials
+          </h4>
+          <!-- Clients -->
+          <div class="flex flex-wrap justify-center gap-5 mt-20">
+            <!-- Client Start -->
+            <figure class="client-card">
+              <img class="w-16 h-16 rounded-full" src="../src/images/image-emily.jpg" alt="emily">
+              <figcaption>
+                <p class="font-barlow text-lg text-dark-grayish-blue my-10">We put our trust in Sunnyside and they
+                  delivered, making sure our needs were met and deadlines were
+                  always hit.</p>
+                <h5 class="font-fraunces text-lg text-des-blue mb-1"> Emily R.</h5>
+                <h6 class="font-barlow text-grayish-blue"> Marketing Director</h6>
+              </figcaption>
+            </figure>
+            <!-- Client End -->
+            <!-- Client Start -->
+            <figure class="client-card">
+              <img class="w-16 h-16 rounded-full" src="../src/images/image-thomas.jpg" alt="thomas">
+              <figcaption>
+                <p class="font-barlow text-lg text-dark-grayish-blue my-10"> Sunnyside’s enthusiasm coupled with their
+                  keen interest in our brand’s success made it a satisfying and enjoyable experience.</p>
+                <h5 class="font-fraunces text-lg text-des-blue mb-1">Thomas S.</h5>
+                <h6 class="font-barlow text-grayish-blue">Chief Operating Officer</h6>
+              </figcaption>
+            </figure>
+            <!-- Client End -->
+            <!-- Client Start -->
+            <figure class="client-card">
+              <img class="w-16 h-16 rounded-full" src="../src/images/image-jennie.jpg" alt="jennie">
+              <figcaption>
+                <p class="font-barlow text-lg text-dark-grayish-blue my-10">Incredible end result! Our sales increased
+                  over 400% when we worked with Sunnyside. Highly recommended!</p>
+                <h5 class="font-fraunces text-lg text-des-blue mb-1">Jennie F.</h5>
+                <h6 class="font-barlow text-grayish-blue">Business Owner</h6>
+              </figcaption>
+            </figure>
+            <!-- Client End -->
+          </div>
+        </div>
+      </section>
+      <!-- Gallery -->
+      <section id="gallery">
+        <div class="flex flex-wrap overflow-hidden">
+          <img class="w-[25%] h-[600px] hover:scale-110 transition-all duration-300"
+            src="../src/images/desktop/image-gallery-milkbottles.jpg" alt="gallery-milkbottles">
+          <img class="w-[25%] h-[600px] hover:scale-110 transition-all duration-300"
+            src="../src/images/desktop/image-gallery-orange.jpg" alt="gallery-orange">
+          <img class="w-[25%] h-[600px] hover:scale-110 transition-all duration-300"
+            src="../src/images/desktop/image-gallery-cone.jpg" alt="gallery-cone">
+          <img class="w-[25%] h-[600px] hover:scale-110 transition-all duration-300"
+            src="../src/images/desktop/image-gallery-sugarcubes.jpg" alt="gallery-sugarcubes">
+        </div>
+      </section>
+    </div>
+
+  </main>
+
+  <footer class="bg-footer-cyan py-10">
+    <div class="container mx-auto">
+      <!-- Footer Logo -->
+      <img class="mx-auto" src="../src/images/footer-logo.svg" alt="footer-logo.svg">
+      <nav id="" class="flex flex-col items-center">
+        <ul class="flex gap-10 mt-5 items-center">
+          <li><a class="font-barlow text-dark-cyan text-lg hover:text-white transition-all duration-300"
+              href="#">About</a></li>
+          <li><a class="font-barlow text-dark-cyan text-lg hover:text-white transition-all duration-300"
+              href="#">Services</a></li>
+          <li><a class="font-barlow text-dark-cyan text-lg hover:text-white transition-all duration-300"
+              href="#">Projects</a></li>
+        </ul>
+        <!-- Social List -->
+        <ul class="flex socials gap-10 mt-5 items-center">
+          <li>
+            <a class="font-barlow text-dark-cyan text-lg transition-all duration-300" href="#">
+              <img src="../src/images/icon-facebook.svg" alt="icon-facebook">
+            </a>
+          </li>
+          <li>
+            <a class="font-barlow text-dark-cyan text-lg transition-all duration-300" href="#">
+              <img src="../src/images/icon-instagram.svg" alt="icon-instagram">
+            </a>
+          </li>
+          <li>
+            <a class="font-barlow text-dark-cyan text-lg transition-all duration-300" href="#">
+              <img src="../src/images/icon-twitter.svg" alt="icon-twitter">
+            </a>
+          </li>
+          <li>
+            <a class="font-barlow text-dark-cyan text-lg transition-all duration-300" href="#">
+              <img src="../src/images/icon-pinterest.svg" alt="icon-pinterest">
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="flex justify-center mt-10 items-center ">
+      <a href="https://hikmatbek.uz" rel="noopener noreferrer" target="_blank" class="border-r-2 pr-2 border-dark-cyan "
+        aria-label="portfolio web site link">
+        <svg class="w-8 hover:scale-110 transition-all duration-300" viewBox="0 0 60 60">
+          <path
+            d="M30,53.5c-6.171,0-9.5-12.108-9.5-23.5S23.829,6.5,30,6.5,39.5,18.608,39.5,30,36.171,53.5,30,53.5Zm0-44c-2.714,0-6.5,7.8-6.5,20.5S27.286,50.5,30,50.5s6.5-7.8,6.5-20.5S32.714,9.5,30,9.5Z"
+            fill="#fff" opacity="1" pathLength="1" stroke-dashoffset="0px" stroke-dasharray="1px 1px"></path>
+          <path d="M50,23.5H10a1.5,1.5,0,0,1,0-3H50a1.5,1.5,0,0,1,0,3Z" fill="#fff" opacity="1" pathLength="1"
+            stroke-dashoffset="0px" stroke-dasharray="1px 1px"></path>
+          <path d="M50,39.5H10a1.5,1.5,0,0,1,0-3H50a1.5,1.5,0,0,1,0,3Z" fill="#fff" opacity="1" pathLength="1"
+            stroke-dashoffset="0px" stroke-dasharray="1px 1px"></path>
+          <path
+            d="M30,53.5A23.5,23.5,0,1,1,53.5,30,23.527,23.527,0,0,1,30,53.5Zm0-44A20.5,20.5,0,1,0,50.5,30,20.523,20.523,0,0,0,30,9.5Z"
+            fill="#fff" opacity="1" pathLength="1" stroke-dashoffset="0px" stroke-dasharray="1px 1px"></path>
+          <path
+            d="M8,31.5A1.5,1.5,0,0,1,6.5,30,23.527,23.527,0,0,1,30,6.5a1.5,1.5,0,0,1,0,3A20.523,20.523,0,0,0,9.5,30,1.5,1.5,0,0,1,8,31.5Z"
+            fill="#fff" opacity="1" pathLength="1" stroke-dashoffset="0px" stroke-dasharray="1px 1px"></path>
+        </svg>
+      </a>
+      <a href="#" rel="noopener noreferrer" target="_blank" class="pl-2" aria-label="Frontend Mentor web site link"><img
+          class="w-7 hover:scale-110 transition-all duration-300" src="../src/images/favicon-32x32.png"
+          alt="FrontEnd mentor io logo">
+      </a>
+    </div>
+  </footer>
+
+  <script>
+    const menuButton = document.querySelector('#nav-header-button');
+    const navMenu = document.querySelector('.header-nav');
+    const navListItems = document.querySelectorAll('.header-nav li');
+    console.log(navListItems);
+    menuButton.addEventListener("click", () => {
+      navMenu.classList.toggle('show')
+    })
+    navListItems.forEach(item => {
+      item.addEventListener('click', () => {
+        navMenu.classList.remove('show')
+      })
+    })
+
+  </script>
+
+
+</body>
+
+</html>
