@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap");
+:root {
+  --color-light-pink: hsl(275, 100%, 97%);
+  --color-purple: hsl(292, 16%, 49%);
+  --color-dark-purple: hsl(292, 42%, 14%);
+  --color-white: hsl(0, 0%, 100%);
+  --font-base: "Work Sans", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+}
+.bg-container {
+  height: calc(100% - 50px);
+}
+.bg-top {
+  height: 40%;
+  background: url("./images/background-pattern-desktop.svg") no-repeat
+    center/cover;
+}
+.bg-body {
+  height: 60%;
+  background: var(--color-light-pink);
+}
+.accordions-container {
+  width: 500px;
+  background-color: #fff;
+  margin: 0px auto;
+  padding: 20px;
+  transform: translateY(-50px);
+  font-family: var(--font-base);
+  border-radius: 12px;
+}
+.accordion-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+.accordion-header img {
+  width: 30px;
+}
+.accordion-header h2 {
+  font-size: 34px;
+  color: var(--color-dark-purple);
+}
+details > summary {
+  list-style: none;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+}
+details > summary img {
+  width: 26px;
+}
+details > summary:hover {
+  color: var(--color-purple);
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+details > p {
+  font-size: 14px;
+  padding: 0px 10px;
+  color: var(--color-purple);
+  line-height: 1.3;
+}
+.attribution {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  position: relative;
+  z-index: 5;
+}
+.attribution a {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  transition: all 0.3s;
+}
+.attribution a:hover {
+  transform: scale(1.5);
+}
+.attribution img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media (max-width: 576px) {
+  .bg-top {
+    background-image: url("./images/background-pattern-mobile.svg");
+  }
+  .accordions-container {
+    width: 90%;
+  }
+  .accordion-header h2 {
+    font-size: 24px;
+  }
+}
