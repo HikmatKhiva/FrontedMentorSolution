@@ -1,0 +1,194 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap");
+:root {
+  --color-red: hsl(1, 90%, 64%);
+  --color-blue: hsl(219, 85%, 26%);
+  --color-light-grayish-blue: hsl(210, 60%, 98%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-light1-grayish-blue: hsl(211, 68%, 94%);
+  --color-light2-grayish-blue: hsl(205, 33%, 90%);
+  --color-grayish-blue: hsl(219, 14%, 63%);
+  --color-dark-blue: hsl(219, 12%, 42%);
+  --color-darken-blue: hsl(224, 21%, 14%);
+  --font-base: "Plus Jakarta Sans", sans-serif;
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.container {
+  width: 800px;
+  margin: 0 auto;
+}
+header {
+  padding: 20px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-base);
+}
+header h3 {
+  font-size: 28px;
+  color: var(--color-darken-blue);
+}
+.badge {
+  background-color: var(--color-blue);
+  color: white;
+  padding: 5px 10px;
+  font-size: 20px;
+  margin-left: 5px;
+  border-radius: 4px;
+}
+.mark-all {
+  border: none;
+  background-color: transparent;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  color: var(--color-grayish-blue);
+  transition: all 0.3s;
+  position: relative;
+}
+.mark-all.active::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 10px;
+  background-color: var(--color-blue);
+}
+.mark-all:hover {
+  color: var(--color-blue);
+}
+main {
+  font-family: var(--font-base);
+}
+/* Notifications */
+.notifications {
+  margin-top: 20px;
+  width: 90%;
+  margin: 0 auto;
+}
+.notification-item {
+  margin-bottom: 30px;
+}
+.avatar {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+.avatar img {
+  width: 40px;
+}
+.avatar .notification {
+  color: var(--color-grayish-blue);
+  position: relative;
+}
+.avatar .name {
+  margin: 0 3px 0px 0px;
+  color: var(--color-darken-blue);
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.avatar .name:hover {
+  color: var(--color-blue);
+}
+.avatar a {
+  color: var(--color-dark-blue);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+.avatar a:hover {
+  color: var(--color-blue);
+}
+.notification-item .date {
+  color: var(--color-grayish-blue);
+  font-size: 14px;
+}
+.notification-item.new .avatar .notification::after {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--color-red);
+}
+.avatar .message {
+  margin-top: 15px;
+  color: var(--color-dark-blue);
+  padding: 10px 15px;
+  border-radius: 4px;
+  border: 1px solid var(--color-light2-grayish-blue);
+  cursor: pointer;
+  max-height: 0px;
+  display: none;
+  opacity: 0;
+}
+.avatar .message.show {
+  max-height: fit-content;
+  opacity: 1;
+  display: block;
+}
+.avatar .message:hover {
+  background-color: var(--color-light1-grayish-blue);
+}
+.avatar .message-file {
+  margin-left: 60px;
+  margin: auto;
+}
+.attribution {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  position: relative;
+  z-index: 5;
+}
+.attribution a {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  transition: all 0.3s;
+}
+.attribution img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.attribution a:hover {
+  transform: scale(1.5);
+}
+@media (max-width: 768px) {
+  .container {
+    width: 576px;
+  }
+}
+@media (max-width: 576px) {
+  .container {
+    width: 100%;
+  }
+  header {
+    padding: 20px 10px;
+  }
+  header h3 {
+    font-size: 20px;
+  }
+  .badge {
+    font-size: 16px;
+  }
+  header button {
+    font-size: 12px;
+  }
+  .avatar img {
+    width: 35px;
+  }
+  .avatar .notification {
+    font-size: 14px;
+  }
+  .avatar .message-file {
+    margin: 0;
+    width: 30px;
+  }
+}
