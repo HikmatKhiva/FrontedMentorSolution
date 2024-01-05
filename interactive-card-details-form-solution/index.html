@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Hikmatbek Bekturdiyev" />
+    <meta name="description" content="interactive-card-details-form-solution FrontendMentor.io solution " />
+    <meta name="keywords" content="interactive-card-details-form-solution frontend mentor solution" />
+    <title>Frontend Mentor | Interactive card details form</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="left-side">
+        <div class="card-front">
+          <img src="./images/bg-card-front.png" alt="bg-card-front" />
+          <div class="card-overflow">
+            <div class="circle-container">
+              <span class="large-circle"></span>
+              <span class="small-circle"></span>
+            </div>
+            <h3 class="card-numbers">0000 0000 0000 0000</h3>
+            <div class="card-bottom">
+              <h4 class="user-info">Jane Appleseed</h4>
+              <p><span class="month">00</span>/<span class="years">00</span></p>
+            </div>
+          </div>
+        </div>
+        <div class="card-back">
+          <img src="images/bg-card-back.png" alt="bg-card-back" />
+          <h4 class="card-back__code">000</h4>
+        </div>
+      </div>
+      <div class="right-side">
+        <form class="form-card">
+          <label for="name">
+            Cardholder Name
+            <input
+              type="text"
+              id="name"
+              name="name"
+              autocomplete="off"
+              placeholder="e.g. Jane Appleseed"
+            />
+            <span class="error">Can't be blank</span>
+          </label>
+          <label for="card-number">
+            Card Number
+            <input
+              type="text"
+              name="number"
+              maxlength="16"
+              id="card-number"
+              placeholder=" e.g. 1234 5678 9123 0000"
+            />
+            <span class="error">Wrong format,numbers only</span>
+          </label>
+          <div class="group-input">
+            <label for="date">
+              Exp. Date (MM/YY)
+              <div class="flex">
+                <input
+                  type="number"
+                  max="12"
+                  maxlength="2"
+                  class="month"
+                  name="month"
+                  id="date"
+                  placeholder="MM"
+                />
+                <input
+                  type="number"
+                  class="year"
+                  placeholder="YY"
+                  name="year"
+                  maxlength="2"
+                />
+                <span class="error">Can't be blank</span>
+              </div>
+            </label>
+            <label for="cvc-code">
+              CVC
+              <input
+                type="text"
+                name="cvc"
+                id="cvc-code"
+                maxlength="3"
+                placeholder="e.g. 123"
+              />
+              <span class="error">Can't be blank</span>
+            </label>
+          </div>
+          <button type="submit">Confirm</button>
+        </form>
+        <!-- Completed state start -->
+        <div class="complete-container">
+          <img src="images/icon-complete.svg" alt="icon-complete" />
+          <h2>Thank you!</h2>
+          <p>We've added your card details</p>
+          <button type="button">Continue</button>
+        </div>
+        <div class="attribution">
+          <!-- GitHub -->
+          <a href="">
+            <img src="./images/github-logo.png" alt="github-logo" />
+          </a>
+          <!-- Web site Url -->
+          <a href="https://hikmatbek.uz/">
+            <img src="./images/web.png" alt="web logo" />
+          </a>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
