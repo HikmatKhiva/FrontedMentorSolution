@@ -1,5 +1,5 @@
 # Frontend Mentor - Intro section with dropdown navigation
-[Live]()
+[Live DEMO](https://section-dropdown-navigation-solution.netlify.app/)
 ![Design preview for the Intro section with dropdown navigation coding challenge](./screenshot/screenshot.png)
 
 ## Welcome! 👋
