@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Hikmatbek Bekturdiyev" />
+    <meta
+      name="description"
+      content="time-tracking-dashboard-main FrontendMentor.io solution"
+    />
+    <meta
+      name="keywords"
+      content="time-tracking-dashboard-main frontend mentor solution"
+    />
+    <title>Frontend Mentor | Time tracking dashboard</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="profile-card">
+        <div class="profile-top">
+          <img src="images/image-jeremy.png" alt="image-jeremy" />
+          <div>
+            <h6>Report for</h6>
+            <h2 class="account-name">Jeremy Robson</h2>
+          </div>
+        </div>
+        <div class="exercise-date">
+          <button class="date-button" name="daily" type="button">Daily</button>
+          <button class="date-button active" name="weekly" type="button">
+            Weekly
+          </button>
+          <button class="date-button" name="monthly" type="button">
+            Monthly
+          </button>
+        </div>
+      </div>
+      <div class="exercise">
+        <!-- Card Start -->
+        <figure class="card-exercise bg-orange" data-name="work">
+          <div class="card-top">
+            <img src="images/icon-work.svg" alt="icon-work" />
+          </div>
+          <figcaption class="card-body">
+            <div class="flex">
+              <h5 class="exercise-title">Work</h5>
+              <img src="images/icon-ellipsis.svg" alt="icon-ellipsis" />
+            </div>
+            <h2 class="current-time">32hrs</h2>
+            <p>Last Week - 36hrs</p>
+          </figcaption>
+        </figure>
+        <!-- Card End-->
+        <!-- Card Start -->
+        <figure class="card-exercise bg-blue" data-name="play">
+          <div class="card-top">
+            <img src="images/icon-play.svg" alt="icon-play" />
+          </div>
+          <figcaption class="card-body">
+            <div class="flex">
+              <h5 class="exercise-title">Play</h5>
+              <img src="images/icon-ellipsis.svg" alt="icon-ellipsis" />
+            </div>
+            <h2 class="current-time">10hrs</h2>
+            <p>Last Week - 8hrs</p>
+          </figcaption>
+        </figure>
+        <!-- Card End-->
+        <!-- Card Start -->
+        <figure class="card-exercise bg-red" data-name="study">
+          <div class="card-top">
+            <img src="images/icon-study.svg" alt="icon-study" />
+          </div>
+          <figcaption class="card-body">
+            <div class="flex">
+              <h5 class="exercise-title">Study</h5>
+              <img src="images/icon-ellipsis.svg" alt="icon-ellipsis" />
+            </div>
+            <h2 class="current-time">4hrs</h2>
+            <p>Last Week - 7hrs</p>
+          </figcaption>
+        </figure>
+        <!-- Card End-->
+        <!-- Card Start -->
+        <figure class="card-exercise bg-green" data-name="exercise">
+          <div class="card-top">
+            <img src="images/icon-exercise.svg" alt="icon-exercise" />
+          </div>
+          <figcaption class="card-body">
+            <div class="flex">
+              <h5 class="exercise-title">Exercise</h5>
+              <img src="images/icon-ellipsis.svg" alt="icon-ellipsis" />
+            </div>
+            <h2 class="current-time">4hrs</h2>
+            <p>Last Week - 5hrs</p>
+          </figcaption>
+        </figure>
+        <!-- Card End-->
+        <!-- Card Start -->
+        <figure class="card-exercise bg-violet" data-name="social">
+          <div class="card-top">
+            <img src="images/icon-social.svg" alt="icon-social" />
+          </div>
+          <figcaption class="card-body">
+            <div class="flex">
+              <h5 class="exercise-title">Social</h5>
+              <img src="images/icon-ellipsis.svg" alt="icon-ellipsis" />
+            </div>
+            <h2 class="current-time">5hrs</h2>
+            <p>Last Week - 10hrs</p>
+          </figcaption>
+        </figure>
+        <!-- Card End-->
+        <!-- Card Start -->
+        <figure class="card-exercise bg-yellow" data-name="self-care">
+          <div class="card-top">
+            <img src="images/icon-self-care.svg" alt="icon-self-care" />
+          </div>
+          <figcaption class="card-body">
+            <div class="flex">
+              <h5 class="exercise-title">Self Care</h5>
+              <img src="images/icon-ellipsis.svg" alt="icon-ellipsis" />
+            </div>
+            <h2 class="current-time">2hrs</h2>
+            <p>Last Week - 2hrs</p>
+          </figcaption>
+        </figure>
+        <!-- Card End-->
+      </div>
+    </main>
+
+    <div class="attribution">
+      <!-- GitHub -->
+      <a href="">
+        <img src="./images/github-logo.png" alt="github-logo" />
+      </a>
+      <!-- Web site Url -->
+      <a href="https://hikmatbek.uz/">
+        <img src="./images/web.png" alt="web logo" />
+      </a>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
