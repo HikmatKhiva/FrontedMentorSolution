@@ -1,6 +1,6 @@
 # Frontend Mentor - Time tracking dashboard
 
-[Live Demo]()
+[Live Demo](https://time-tracking-dashboard-main-solution.netlify.app/)
 ![Design preview for the Time tracking dashboard coding challenge](./screenshot/screenshot.png)
 
 ## Welcome! 👋
