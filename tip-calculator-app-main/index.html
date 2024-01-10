@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Hikmatbek Bekturdiyev" />
+  <meta name="description" content="tip-calculator-app-main FrontendMentor.io solution" />
+  <meta name="keywords" content="tip-calculator-app-main frontend mentor solution" />
+  <title>Frontend Mentor | Tip calculator app</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <h2 class="title">SPLI <br />TTER</h2>
+    <div class="card-calculator">
+      <div class="form">
+        <label for="money">
+          Bill
+          <input type="text" id="money" autocomplete="off" name="money" class="input-full" />
+          <span class="error">Can't be zero</span>
+          <img src="images/icon-dollar.svg" alt="icon-dollar" class="label-icon" />
+        </label>
+        <label for="tip">Select Tip %</label>
+        <div class="buttons">
+          <button class="btn" value="5">5%</button>
+          <button class="btn" value="10">10%</button>
+          <button class="btn" value="15">15%</button>
+          <button class="btn" value="25">25%</button>
+          <button class="btn" value="50">50%</button>
+          <input type="text" id="tip" name="tip" autocomplete="off" placeholder="Custom" class="btn input custom" />
+        </div>
+        <label for="people">
+          Number of People
+          <input type="text" name="person" class="input-full person-input" id="people" />
+          <span class="error">Can't be zero</span>
+          <img src="./images/icon-person.svg" alt="icon-person" class="label-icon person" />
+        </label>
+      </div>
+      <div class="right-side">
+        <div class="output">
+          <div class="item">
+            <p>
+              Tip Amount
+              <span class="sub-title">/ person</span>
+            </p>
+            <h3 class="amount title-price">$0.00</h3>
+          </div>
+          <div class="item">
+            <p>
+              Total
+              <span class="sub-title">/ person</span>
+            </p>
+            <h3 class="total title-price">$0.00</h3>
+          </div>
+        </div>
+        <button type="button" class="reset">Reset</button>
+      </div>
+    </div>
+  </main>
+  <div class="attribution">
+    <!-- GitHub -->
+    <a href="">
+      <img src="./images/github-logo.png" alt="github-logo" />
+    </a>
+    <!-- Web site Url -->
+    <a href="https://hikmatbek.uz/">
+      <img src="./images/web.png" alt="web logo" />
+    </a>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
