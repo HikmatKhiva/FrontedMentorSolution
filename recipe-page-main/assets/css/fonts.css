@@ -1,0 +1,61 @@
+@font-face {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 100;
+  src: url("../fonts/outfit/static/Outfit-Thin.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 200;
+  src: url("../fonts/outfit/static/Outfit-ExtraLight.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/outfit/static/Outfit-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/outfit/static/Outfit-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/outfit/static/Outfit-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/outfit/static/Outfit-SemiBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/outfit/static/Outfit-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/outfit/static/Outfit-ExtraBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/outfit/static/Outfit-Black.ttf") format("truetype");
+}
+/* Young Serif */
+@font-face {
+  font-family: "Young Serif";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/young-serif/YoungSerif-Regular.ttf") format("truetype");
+}
